@@ -41,4 +41,11 @@ class VilleTest {
                 parisDelhi,
                 ville.restaurantsAvecSpecialite(Specialite.INDIENNE).getFirst());
     }
+
+    @Test
+    void restaurantAvecSpecialiteInexistant_ko() {
+        Assertions.assertEquals(
+                0,
+                ville.restaurantsAvecSpecialite(Specialite.AMERICAINE).size());
+    }
 }
